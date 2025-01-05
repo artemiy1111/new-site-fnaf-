@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNAF Inspired Games</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: red;
+            text-align: center;
+        }
+        header {
+            background-color: #440000;
+            padding: 20px 0;
+            box-shadow: 0px 2px 5px red;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+        .games {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .game-card {
+            background-color: #220000;
+            border: 2px solid red;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0px 2px 10px red;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 20px red;
+        }
+        .game-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .game-card h2 {
+            margin: 15px 0 10px;
+            font-size: 1.5em;
+        }
+        .game-card p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        footer {
+            background-color: #440000;
+            color: red;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FNAF HTML GAMES </h1>
+    </header>
+
+    <div class="games" id="game-list">
+        <!-- Game cards will be dynamically added here -->
+        <div class="game-card">
+            <img src="https://i.postimg.cc/zvrg4nFV/a-logo-for-a-five-nights-at-freddy-s-ins-yurv-NYc-WT2-q-KJai-FKmw-u60t-RRmx-Q7e-1-GBav1-Txg.jpg" alt="Game 1">
+            <h2>FNaF 1</h2>
+            <p>Survive the night as an animatronic security guard.</p>
+            <a href="https://artemiy1111.github.io/fnaf-html-/">Play Now</a>
+        </div>
+
+        <div class="game-card">
+            <img src="https://i.postimg.cc/Twmbkkmz/a-logo-for-the-game-five-nights-at-fredd-n-JXf-Tw-XTSMCVSco-JD5rtsg-r-Hr-PF46-TVep-KG-FYD7w.jpg" alt="Game 2">
+            <h2>FNaF 2</h2>
+            <p>Now with double the threat !</p>
+            <a href="https://artemiy1111.github.io/fnaf-v-2.1/">Play Now</a>
+        </div>
+
+        <div class="game-card">
+            <img src="https://i.postimg.cc/9fsTY34P/a-logo-for-a-five-nights-at-freddy-s-ins-lryr-GI5-QS0-Gi-D5k-FDC-VQw-d6dd-Gr-Nb-Sci-A7-Wzy9qfr-QQ.jpg" alt="Game 3">
+            <h2>FNaF 4 </h2>
+            <p>Survive with two animatronics haunting you.</p>
+            <a href="https://artemiy1111.github.io/fnaf-v4-/">Play Now</a>
+        </div>
+    </div>
+
+    <footer>
+     2025 FNAF Inspired Games | Designed with Fear and Fun in Mind
+    </footer>
+
+    <script>
+        // Function to add a new game card dynamically
+        function addGame(title, description, imageUrl, linkUrl) {
+            const gameList = document.getElementById('game-list');
+
+            const gameCard = document.createElement('div');
+            gameCard.className = 'game-card';
+
+            gameCard.innerHTML = `
+                <img src="${imageUrl}" alt="${title}">
+                <h2>${title}</h2>
+                <p>${description}</p>
+                <a href="${linkUrl}" target="_blank">Play Now</a>
+            `;
+
+            gameList.appendChild(gameCard);
+        }
+
+        // Example usage: Add new games here
+        // addGame('Game Title', 'Game Description', 'image.jpg', 'link.html');
+    </script>
+</body>
+</html>
